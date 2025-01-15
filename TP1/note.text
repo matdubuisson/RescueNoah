@@ -1,0 +1,14 @@
+EX1.1.4:
+a)
+q1 et q2 sont deux queues distinctes
+
+push(e):
+    q1.enqueue(e)
+
+pop():
+    while not q1.empty():
+        q2.enqueue(q1.dequeue()) # Reverse the queue
+    val = q2.dequeue()
+    while not q2.empty(): 
+        q1.enqueue(q2.dequeue()) # Reverse the queue
+    return val
